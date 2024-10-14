@@ -5,17 +5,18 @@
             <ng-content class="logo-2" select="[logo-2]"></ng-content>
         </a>
         <div class="middle-section">
-            <a style="background-color: inherit;" target="_blank" href="https://www.codecademy.com/resources/blog/angular-code-challenges-for-beginners/">TASKS</a>
             <a style="background-color: inherit;" target="_blank" href="https://www.angular.dev">ANGULAR</a>
             <a style="background-color: inherit;" target="_blank" href="https://www.google.com">GOOGLE</a>
-            <span style="background-color: inherit; font-weight: 600;">{{theme | uppercase}}</span>
+            <a style="background-color: inherit;" target="_blank" href="https://www.codecademy.com/resources/blog/angular-code-challenges-for-beginners/">CHALLENGES</a>
+            
         </div>
     </div>
-
     <div class="right-section">
-        <a target="_blank" href="https://www.github.com/lukaszharkot">
-            <ng-content select="[toolbar-right]"></ng-content>
-        </a>
+        <div class="tasks">
+            TASKS 
+            <div style="margin-left: 5px;">▼</div>
+        </div>
+        <span style="background-color: inherit; font-weight: 600;">{{theme | uppercase}}</span>
     </div>
     <div class="toolbar-underline"></div>
 </div>

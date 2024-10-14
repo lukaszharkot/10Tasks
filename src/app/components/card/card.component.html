@@ -5,9 +5,7 @@
     <div class="card-title">
         <ng-content select="[title]"></ng-content>
     </div>
-    <div class="price">
-        <ng-content select="[price]"></ng-content>
-    </div>
+    <ng-content class="kcal" select="[kcal]"></ng-content>
     <button [ngClass]="[isActive ? 'added' : 'add']">{{message}}</button>
 
 </div>

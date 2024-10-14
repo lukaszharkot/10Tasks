@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, AfterViewInit } from '@angular/core';
+import { Component, OnInit, inject, AfterViewInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -8,14 +8,13 @@ import { Component, OnInit, inject, AfterViewInit } from '@angular/core';
 export class CardComponent implements AfterViewInit {
   isActive = false;
   message = 'Add to cart';
+  @Input() style?: string;
   //constructor() { }
   //inject
 
-  setActivetTrue () {
-    this.isActive = true
-  }
-  setActiveFalse() {
-    this.isActive = false
+  toggleActive(): void {
+    this.isActive = !this.isActive; 
+    this.message = this.isActive ? 'Remove from cart' : 'Add to cart'; 
   }
 
   ngAfterViewInit(): void {
