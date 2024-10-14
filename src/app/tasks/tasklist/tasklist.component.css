@@ -27,4 +27,14 @@
     cursor: pointer;
     font-family: 'Righteous', sans-serif;
     font-size: 18px;
+    transition: 0.4s ease-in-out;
 }
+
+.logo-1{
+    background-color: inherit;
+}
+
+.task-button:hover{
+    color: #414141;
+}
+
