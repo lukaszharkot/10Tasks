@@ -37,5 +37,30 @@ a{
 .underline{
     width: 95%;
     height: 1px;
-    background-color: rgb(209, 209, 209);;
+    background-color: rgb(209, 209, 209);
+}
+
+.underline-container{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+}
+
+.task-div{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border: 1px solid rgb(209, 209, 209);
+    padding: 30px 20px;
+    position: relative;
+}
+
+.task-div-text{
+    color: #5d5d5d;
+    font-size: 10px;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: transparent;
 }
