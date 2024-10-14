@@ -16,19 +16,19 @@
     background-color: transparent;
     align-items: center;
     justify-content: center;
-    background-color: inherit;
+    background-color: transparent;
 }
 
 .right-section{
     margin-right: 12.5%;
     font-size: 14px;
     display: flex;
-    background-color: inherit;
+    background-color: transparent;
 }
 
 .tasks{
     margin-right: 20px;
-    background-color: inherit;
+    background-color: transparent;
     display: flex;
 }
 
@@ -47,7 +47,7 @@
     color: black;
     justify-content: space-between;
     width: 350px;
-    background-color: inherit;
+    background-color: transparent;
     text-decoration: none;
     font-family: monospace;
     font-size: 14px;
