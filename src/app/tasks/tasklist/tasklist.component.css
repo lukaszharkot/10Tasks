@@ -1,0 +1,30 @@
+
+.task-label{
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-family: 'Righteous', sans-serif;
+}
+
+.task-text{
+    font-size: 16px;
+    color: #414141;
+}
+
+
+.task-button-div{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.task-button{
+    border: none;
+    cursor: pointer;
+    font-family: 'Righteous', sans-serif;
+    font-size: 18px;
+}

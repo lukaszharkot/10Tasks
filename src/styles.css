@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    --light: #f4f3f1;
+    --dark: #5d5d5d;
+    background-color: #f4f3f1;
+    text-decoration: none;
+    font-family: monospace, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.light-theme {
+    background-color: var(--light);
+    color: black;
+}
+
+.dark-theme {
+    background-color: var(--dark);
+    color: white;
+}
+
+.site-label{
+    font-size: 32px;
+    margin-left: 1%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family: 'Righteous', sans-serif;
+}
+
+.underline{
+    width: 95%;
+    height: 1px;
+    background-color: rgb(209, 209, 209);;
+}

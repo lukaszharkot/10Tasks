@@ -1,0 +1,13 @@
+<main>
+    <div class="site-label">All Tasks</div>
+    <div *ngFor="let task of tasks">
+        <div class="task-label">Task {{ task.id }}: {{ task.title }}</div>
+        <div class="task-text">{{ task.content }}</div>
+        <div class="task-button-div">
+            <button class="task-button">View task ></button>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+            <div class="underline"></div>
+        </div>
+    </div>
+</main>

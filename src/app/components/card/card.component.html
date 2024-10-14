@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-photo">
+        <ng-content select="[photo]"></ng-content>
+    </div>
+    <div class="card-title">
+        <ng-content select="[title]"></ng-content>
+    </div>
+    <div class="price">
+        <ng-content select="[price]"></ng-content>
+    </div>
+    <button [ngClass]="[isActive ? 'added' : 'add']">{{message}}</button>
+
+</div>
