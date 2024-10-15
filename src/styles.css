@@ -7,9 +7,13 @@
     padding: 0;
     --light: #f4f3f1;
     --dark: #5d5d5d;
-    background-color: #f4f3f1;
+    
     text-decoration: none;
     font-family: monospace, sans-serif;
+}
+
+body{
+    background-color: #f4f3f1;
 }
 
 .flex-centered{
@@ -68,13 +72,4 @@ a{
     position: absolute;
     top: 10px;
     left: 15px;
-    background-color: transparent;
-}
-
-span{
-    background-color: transparent;
-}
-
-.transparent{
-    background-color: transparent;
 }

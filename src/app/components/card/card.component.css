@@ -21,13 +21,13 @@
     height: 80px;
 }
 .card:hover .card-photo{
-    width: 50%;
+    width: 60%;
 }
 .card-photo{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 80%;
     margin: 15px 0px;
     overflow: hidden;
     background-color: transparent;
