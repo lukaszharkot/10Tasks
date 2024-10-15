@@ -1,10 +1,11 @@
-<main>
+<main [@listAnimation]>
     <div class="site-label">All Tasks</div>
     <div *ngFor="let task of tasks">
         <div class="task-label">Task {{ task.id }}: {{ task.title }}</div>
         <div class="task-text">{{ task.content }}</div>
         <div class="task-button-div">
-            <button class="task-button" routerLink="/task-{{task.id}}">View task ></button>
+            <button *ngIf="task.id === 1" class="task-button" (click)="showMessage()">{{ taskMessage }}</button>
+            <button *ngIf="task.id !== 1" class="task-button" routerLink="/task-{{task.id}}">View task ></button>
         </div>
         <div class="underline-container">
             <div class="underline"></div>
