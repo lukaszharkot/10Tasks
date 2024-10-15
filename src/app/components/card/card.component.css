@@ -1,3 +1,75 @@
+
+
 .card{
     background-color: transparent;
+    width: 200px;
+    height: 250px;
+    position: relative;
+    border-radius: 5%;
+    overflow: hidden;
+    display: grid;
+    justify-items: center;
+    border: 1px solid transparent;
+    transition: 400ms ease-in-out;
 }
+.card:hover{
+    border: 1px solid #cccccc;
+}
+.card:hover .card-hover{
+    opacity: 1;
+    height: 80px;
+}
+
+.card:hover .card-photo{
+    width: 50%;
+}
+
+.card-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 15px 0px;
+    overflow: hidden;
+    background-color: transparent;
+    transition: 400ms ease-in-out;
+}
+
+.card-title{
+    background-color: transparent;
+    width: 80%;
+    text-align: center;
+}
+
+.card-time{
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    display: grid;
+    text-align: center;
+    background-color: transparent;
+    font-family: "Noto Serif Oriya", serif;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 10px;
+}
+
+.card-hover{
+    background-color: transparent;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    transition: height 400ms ease-in-out;
+}
+
+.card-values{
+    font-family: "Noto Serif Oriya", serif;
+    font-size: 11px;
+    color: #aaaaaa;
+}
+
+.card-like{
+    font-size: 20px;
+    color: black;
+}
+

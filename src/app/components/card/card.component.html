@@ -1,11 +1,31 @@
 <div class="card">
     <div class="card-photo">
-        <ng-content select="[photo]"></ng-content>
+            <ng-content select="[photo]"></ng-content>
     </div>
     <div class="card-title">
         <ng-content select="[title]"></ng-content>
     </div>
-    <ng-content class="kcal" select="[kcal]"></ng-content>
-    <button [ngClass]="[isActive ? 'added' : 'add']">{{message}}</button>
-
+    <div class="card-time">
+        <ng-content select="[time]"></ng-content>
+        <span>min</span>
+    </div>
+    <div class="card-hover">
+        <span class="card-values">Wartości odżywcze:</span>
+        <div class="card-kcal transparent">
+            <ng-component select="[kcal]"></ng-component>
+            <span>Kcal</span>
+        </div>
+        <div class="card-b transparent">
+            <ng-component select="[b] g"></ng-component>
+            <span>Białka</span>
+        </div>
+        <div class="card-t transparent">
+            <ng-component select="[t] g"></ng-component>
+            <span>Tłuszczu</span>
+        </div>
+    </div>
+    <div class="card-like">
+        <i class="bi bi-suit-heart"></i>
+        <i class="bi bi-suit-heart-filled"></i>
+    </div>
 </div>

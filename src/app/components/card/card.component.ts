@@ -6,15 +6,15 @@ import { Component, OnInit, inject, AfterViewInit, Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements AfterViewInit {
-  isActive = false;
+  like = true;
+
   message = 'Add to cart';
-  @Input() style?: string;
+  @Input() style: 'normal' | 'wide' | 'full' = 'normal';
   //constructor() { }
   //inject
 
   toggleActive(): void {
-    this.isActive = !this.isActive; 
-    this.message = this.isActive ? 'Remove from cart' : 'Add to cart'; 
+    this.like = !this.like; 
   }
 
   ngAfterViewInit(): void {
