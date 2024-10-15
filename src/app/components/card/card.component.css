@@ -11,6 +11,7 @@
     justify-items: center;
     border: 1px solid transparent;
     transition: 400ms ease-in-out;
+    margin: 5px 5px;
 }
 .card:hover{
     border: 1px solid #cccccc;
@@ -19,11 +20,9 @@
     opacity: 1;
     height: 80px;
 }
-
 .card:hover .card-photo{
     width: 50%;
 }
-
 .card-photo{
     display: flex;
     justify-content: center;
@@ -59,7 +58,10 @@
     opacity: 0;
     height: 0px;
     overflow: hidden;
-    transition: height 400ms ease-in-out;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    transition: 400ms ease-in-out;
 }
 
 .card-values{
@@ -69,7 +71,57 @@
 }
 
 .card-like{
-    font-size: 20px;
+    font-size: 16px;
     color: black;
+    background-color: transparent;
+    position: absolute;
+    top: 8%;
+    right: 8%;
+    transition: 400ms ease-in-out;
+}
+.card-like:hover{
+    color: red;
 }
 
+.red{
+    color: red;
+}
+
+.card-values-box{
+    display: grid;
+    font-family: "Noto Serif Oriya", serif;
+    font-size: 8px;
+    justify-items: center;
+    margin: 0px 7px;
+}
+
+
+
+.card-wide{
+    width: 500px;
+    height: 200px;
+    border: 1px solid transparent;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 400ms ease-in-out;
+}
+.card-wide:hover{
+    border: 1px solid #cccccc;
+}
+.card-wide:hover .card-photo-wide{
+    width: 55%;
+}
+
+.card-photo-wide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 15px 15px;
+    overflow: hidden;
+    background-color: transparent;
+    transition: 400ms ease-in-out;
+}

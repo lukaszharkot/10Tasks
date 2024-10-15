@@ -6,14 +6,14 @@ import { Component, OnInit, inject, AfterViewInit, Input } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements AfterViewInit {
-  like = true;
+  like = false;
 
   message = 'Add to cart';
-  @Input() style: 'normal' | 'wide' | 'full' = 'normal';
+  @Input() style: 'normal' | 'wide'  = 'normal';
   //constructor() { }
   //inject
 
-  toggleActive(): void {
+  toggleLike(): void {
     this.like = !this.like; 
   }
 
@@ -21,6 +21,3 @@ export class CardComponent implements AfterViewInit {
   }
 
 }
-
-//NgIf do uzycia razem z inputem, zrobie wersje wide i small - dwa kafelki jak na olx w liscie albo w kafelku. 
-//isActive do przycisku jak sie kliknie to pisze Added to cart jak sie najedzie na hover to sie pojawia remove from cart ? opacity i visibility wtedy css
