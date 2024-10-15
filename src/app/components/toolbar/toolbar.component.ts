@@ -1,5 +1,5 @@
 import { Component, inject, Input, ViewChild, ElementRef, Renderer2, AfterViewInit, OnInit} from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { trigger, style, transition, animate } from '@angular/animations';
 import { TaskService } from 'src/app/services/task.service';
 
 
@@ -37,7 +37,7 @@ export class ToolbarComponent implements AfterViewInit, OnInit {
   ngAfterViewInit(): void {
     this.renderer.setStyle(this.toolbar.nativeElement, 'background-color', `var(--${this.theme})`);
   }
-  
+
   showMessage() {
     this.taskMessage = "It's above you!";
   }

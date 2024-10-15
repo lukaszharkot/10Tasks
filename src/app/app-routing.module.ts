@@ -7,6 +7,7 @@ import { TasklistComponent } from './tasks/tasklist/tasklist.component';
 const routes: Routes = [
   {
     path: 'task-list',
+    title: '10 Angular Tasks',
     component: TasklistComponent,
 },
   {
