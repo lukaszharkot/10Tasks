@@ -1,0 +1,19 @@
+.task-img{
+    object-fit: cover;
+    width: 100%;
+    background-color: transparent;
+}
+
+.title{
+    background-color: transparent;
+    font-family: "Noto Serif Oriya", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+}
+
+span{
+    font-family: "Noto Serif Oriya", serif;
+    font-weight: 500;
+    font-size: 18px;
+}
