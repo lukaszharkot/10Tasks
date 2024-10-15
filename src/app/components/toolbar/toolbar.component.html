@@ -7,16 +7,21 @@
         <div class="middle-section">
             <a style="background-color: inherit;" target="_blank" href="https://www.angular.dev">ANGULAR</a>
             <a style="background-color: inherit;" target="_blank" href="https://www.google.com">GOOGLE</a>
-            <a style="background-color: inherit;" target="_blank" href="https://www.codecademy.com/resources/blog/angular-code-challenges-for-beginners/">CHALLENGES</a>
-            
+            <a style="background-color: inherit;" target="_blank" href="https://www.codecademy.com/resources/blog/angular-code-challenges-for-beginners/">CHALLENGES</a>   
         </div>
     </div>
     <div class="right-section">
-        <div class="tasks">
+        <div class="tasks" (click)="toggleTasks()">
             TASKS 
-            <div style="margin-left: 5px;">▼</div>
+            <div class="task-triangle" [class.rotate]="showTasks">▼</div>
         </div>
         <span style="background-color: inherit; font-weight: 600;">{{theme | uppercase}}</span>
     </div>
     <div class="toolbar-underline"></div>
+    <div class="task-list" *ngIf="showTasks" [@fadeInOut]>
+        <a class="task-link" routerLink="/" (click)="closeDropdown()">All Tasks</a>
+        <div *ngFor="let task of tasks">
+            <a class="task-link" routerLink="/task-{{task.id}}" (click)="closeDropdown()">Task {{task.id}} ></a>
+        </div>
+    </div>
 </div>
