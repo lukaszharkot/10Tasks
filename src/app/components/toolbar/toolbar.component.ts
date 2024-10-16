@@ -1,6 +1,8 @@
-import { Component, inject, Input, ViewChild, ElementRef, Renderer2, AfterViewInit, OnInit} from '@angular/core';
+import { Component, inject, Input, ViewChild, ElementRef, Renderer2, AfterViewInit, OnInit, OnDestroy} from '@angular/core';
 import { trigger, style, transition, animate } from '@angular/animations';
 import { TaskService } from 'src/app/services/task.service';
+import { fromEvent, Subscription } from 'rxjs';
+import { throttleTime, map } from 'rxjs/operators';
 
 
 @Component({
@@ -20,15 +22,18 @@ import { TaskService } from 'src/app/services/task.service';
   ]
 })
 
-export class ToolbarComponent implements AfterViewInit, OnInit {
+export class ToolbarComponent implements AfterViewInit, OnInit, OnDestroy {
   showTasks: boolean = false;
-  taskMessage = 'View task >'
+  scrolled: boolean = false;
   tasks: any[] = [];
+  taskMessage = 'Task 1 >'
+
   @Input() theme: 'light' | 'dark' = 'light';
   @ViewChild('toolbarDiv') toolbar!: ElementRef;
 
   private renderer = inject(Renderer2); // zamiast constructor
   taskService = inject(TaskService);
+  private scrollSubscription!: Subscription;
 
   ngOnInit(): void {
     this.tasks = this.taskService.getTasks();
@@ -36,16 +41,36 @@ export class ToolbarComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit(): void {
     this.renderer.setStyle(this.toolbar.nativeElement, 'background-color', `var(--${this.theme})`);
+
+    // Rxjs tworzymy obserwowaną fukcje pipe
+    const scroll$ = fromEvent(window, 'scroll').pipe(
+      throttleTime(50),
+      map(() => window.scrollY > 0)
+    );
+
+    // Subskrybujemy do "wyniku"
+    this.scrollSubscription = scroll$.subscribe((isScrolled: boolean) => {
+      this.scrolled = isScrolled;
+      console.log(isScrolled)
+    });
+  }
+
+  //robimy to żeby uniknąć problemów jeżeli komponent został zniszczony
+  ngOnDestroy(): void {
+    if (this.scrollSubscription) {
+      this.scrollSubscription.unsubscribe();
+    }
   }
 
   showMessage() {
-    this.taskMessage = "It's above you!";
+    this.taskMessage = "Above u!";
   }
   toggleTasks(): void {
     this.showTasks = !this.showTasks;
   }
   closeDropdown(): void {
     this.showTasks = false;
+    this.taskMessage = 'Task 1 >'
   }
 }
 

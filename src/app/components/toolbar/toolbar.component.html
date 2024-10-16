@@ -22,7 +22,8 @@
         <a class="task-link" routerLink="/" (click)="closeDropdown()">All Tasks</a>
         <div class="underline-container"><div class="underline"></div></div>
         <div *ngFor="let task of tasks">
-            <a class="task-link" routerLink="/task-{{task.id}}" (click)="closeDropdown()">Task {{task.id}} ></a>
+            <a *ngIf="task.id === 1" class="task-link" (click)="showMessage()">{{taskMessage}}</a>
+            <a *ngIf="task.id !== 1" class="task-link" routerLink="/task-{{task.id}}" (click)="closeDropdown()">Task {{task.id}} ></a>
             <div class="underline-container"><div class="underline"></div></div>
         </div>
     </div>
