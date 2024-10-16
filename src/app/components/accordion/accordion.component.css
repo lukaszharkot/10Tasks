@@ -1,0 +1,76 @@
+.accordion{
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    transition: 400ms ease-in-out;
+}
+.accordion-item.open,
+.accordion-item:hover{
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #cccccc;
+}
+.accordion-item:last-child{
+    border-bottom: none;
+}
+.accordion-item:first-child{
+    border-top: none;
+}
+  
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 25px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 400ms ease-in-out;
+}
+.accordion-header.open{
+    background-color: #f4f3f1;
+}
+.accordion-header:hover{
+    background-color: #f4f3f1;
+}
+.accordion-header .accordion-title {
+    font-weight: 500;
+    font-size: 15px;
+    font-family: "Noto Serif Oriya", serif;
+    font-style: inherit;
+}
+
+
+.accordion-icon{
+    font-size: 16px;
+    transition: 400ms ease-in-out;
+}
+.accordion-icon.rotated{
+    transform: rotate(180deg);
+}
+  
+.accordion-body {
+    padding: 0px 30px;
+    border-top: 1px solid #ddd;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: #fff;
+    transition: 400ms ease-in-out, opacity 300ms ease-in-out;
+    font-family: "Noto Serif Oriya", serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion-body.open {
+    height: 70px;
+    opacity: 1;
+    padding: 30px;
+}
+  

@@ -1,0 +1,13 @@
+<main>
+    <div class="accordion">
+        <div *ngFor="let item of items; let i = index" class="accordion-item" [ngClass]="{'open': isOpen === i}">
+            <div class="accordion-header" [ngClass]="{'open': isOpen === i}" (click)="toggleAccordion(i)">
+                <span class="accordion-title">{{ item.title }}</span>
+                <span class="accordion-icon" [ngClass]="{'rotated': isOpen === i}">{{ item.icon }}</span>
+            </div>
+            <div class="accordion-body" [ngClass]="{'open': isOpen === i}">
+            {{ item.body }}
+            </div>
+        </div>
+    </div>
+</main>
