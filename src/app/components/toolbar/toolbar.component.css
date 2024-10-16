@@ -8,6 +8,14 @@
     position: fixed;
     top: 0;
     z-index: 999;
+    background-color: white;
+    transition: 400ms ease-in-out;
+}
+
+.toolbar.scrolled{
+    height: 80px;
+    background-color: light;
+    box-shadow: none;
 }
 
 .left-section{
@@ -71,6 +79,7 @@
     left: 50%;
     transform: translate(-50%);
     background-color: rgb(209, 209, 209);;
+    transition: 500ms ease-in-out;
 }
 
 .middle-section{

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { Task7Component } from './tasks/task7/task7.component';
 import { Task8Component } from './tasks/task8/task8.component';
 import { Task9Component } from './tasks/task9/task9.component';
 import { Task10Component } from './tasks/task10/task10.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { CreditCardFormatPipe } from './pipes/credit-card-format.pipe';
 
 @NgModule({
   declarations: [
@@ -33,12 +36,15 @@ import { Task10Component } from './tasks/task10/task10.component';
     Task7Component,
     Task8Component,
     Task9Component,
-    Task10Component
+    Task10Component,
+    AccordionComponent,
+    CreditCardFormatPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

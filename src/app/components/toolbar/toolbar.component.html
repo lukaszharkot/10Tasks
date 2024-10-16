@@ -1,4 +1,4 @@
-<div class="toolbar" #toolbarDiv>
+<div class="toolbar" #toolbarDiv [ngClass]="{'scrolled': !scrolled}">
     <div class="left-section">
         <a style="display: flex" href="/">
             <ng-content class="logo-1" select="[logo-1]"></ng-content>

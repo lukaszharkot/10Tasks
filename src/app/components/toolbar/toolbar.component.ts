@@ -2,7 +2,7 @@ import { Component, inject, Input, ViewChild, ElementRef, Renderer2, AfterViewIn
 import { trigger, style, transition, animate } from '@angular/animations';
 import { TaskService } from 'src/app/services/task.service';
 import { fromEvent, Subscription } from 'rxjs';
-import { throttleTime, map } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 
 @Component({
@@ -44,7 +44,6 @@ export class ToolbarComponent implements AfterViewInit, OnInit, OnDestroy {
 
     // Rxjs tworzymy obserwowaną fukcje pipe
     const scroll$ = fromEvent(window, 'scroll').pipe(
-      throttleTime(50),
       map(() => window.scrollY > 0)
     );
 
@@ -63,7 +62,7 @@ export class ToolbarComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   showMessage() {
-    this.taskMessage = "Above u!";
+    this.taskMessage = "Above U!";
   }
   toggleTasks(): void {
     this.showTasks = !this.showTasks;
