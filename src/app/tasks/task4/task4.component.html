@@ -2,5 +2,17 @@
     <app-task-component [taskId]=4></app-task-component>
     <div class="task-div">
         <p class="task-div-text">Task Div</p>
+        <p class="task-text">Credit Card number pipe:</p>
+        <div class="card-div">
+            <img src="assets/card.png" class="card-img" alt="Credit card"/>
+            <div class="card-number">{{ savedCreditCardNumer ? (savedCreditCardNumer | creditCardFormat) : '' }}</div>
+        </div>
+        <form [formGroup]="cardForm" (ngSubmit)="SubmitNumber()">
+            <input type="text" formControlName="creditCard" placeholder="Enter Credit Card Number" maxlength="16" required/>
+            <button type="submit" [ngClass]="{'valid' : cardForm.get('creditCard')?.valid}">
+                <span *ngIf="cardForm.get('creditCard')?.invalid" class="btn">Submit</span>
+                <i *ngIf="cardForm.get('creditCard')?.valid" class="bi bi-send-check btn"></i>
+            </button>
+        </form>
     </div>
 </main>
