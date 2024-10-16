@@ -95,33 +95,66 @@
     margin: 0px 7px;
 }
 
+.card-values-box span{
+    font-family: "Noto Serif Oriya", serif;
+}
 
 
 .card-wide{
-    width: 500px;
+    width: 420px;
     height: 200px;
     border: 1px solid transparent;
-    border-radius: 5%;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     transition: 400ms ease-in-out;
 }
+.card-wide .card-values-box{
+    margin-top: 10px;
+}
+.card-wide .card-like{
+    left: 4%;
+    width: 16px;
+    top: 25%;
+    opacity: 0;
+    transition: 400ms ease-in-out;
+}
+.card-wide .card-time{
+    left: 4%;
+}
+
 .card-wide:hover{
     border: 1px solid #cccccc;
 }
 .card-wide:hover .card-photo-wide{
-    width: 55%;
+    width: 41%;
 }
+.card-wide:hover .card-like{
+    opacity: 1;
+}
+
 
 .card-photo-wide{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 45%;
     margin: 15px 15px;
     overflow: hidden;
     background-color: transparent;
+    transition: 400ms ease-in-out;
+    margin-right: -10px;
+}
+
+.card-hover-wide{
+    height: 150px;
+    width: 200px;
+    overflow: hidden;
+    display: grid;
+    grid-column: auto;
+    align-items: center;
+    justify-items: center;
     transition: 400ms ease-in-out;
 }

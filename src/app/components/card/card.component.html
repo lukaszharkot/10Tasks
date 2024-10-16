@@ -2,35 +2,55 @@
     <div [ngClass]="{'card-photo': style==='normal', 'card-photo-wide': style==='wide'}">
         <ng-content select="[photo]"></ng-content>
     </div>
-    <div class="card-title ">
-        <ng-content select="[title]"></ng-content>
+    <div class="card-title" *ngIf="style==='normal'">
+        <ng-template *ngTemplateOutlet="title"></ng-template>
     </div>
     <div class="card-time ">
         <ng-content select="[time]"></ng-content>
         <span>min</span>
     </div>
-    <div class="card-hover" *ngIf="style==='normal'">
+    <div [ngClass]="{'card-hover': style==='normal', 'card-hover-wide': style==='wide'}">
+        <div class="card-title" *ngIf="style==='wide'">
+            <ng-template *ngTemplateOutlet="title"></ng-template>
+        </div>
         <span class="card-values">Wartości odżywcze:</span>
         <div class="flex-centered " style="margin-top: -20px;">
-            <div class="card-values-box ">
+            <div class="card-values-box">
                 <ng-content select="[kcal]"></ng-content>
                 <span>Kcal</span>
             </div>
-            <div class="card-values-box ">
+            <div class="card-values-box">
                 <ng-content select="[b]"></ng-content>
                 <span>Białka</span>
             </div>
-            <div class="card-values-box ">
+            <div class="card-values-box">
                 <ng-content select="[t]"></ng-content>
                 <span>Tłuszczu</span>
             </div>
-            <div class="card-like" (click)="toggleLike()">
-                <i class="bi bi-suit-heart " *ngIf="!like"></i>
-                <i class="bi bi-suit-heart-fill  red" *ngIf="like"></i>
+        </div>
+        <div class="flex-centered " style="margin-top: -20px;" *ngIf="style==='wide'">
+            <div class="card-values-box">
+                <ng-content select="[w]"></ng-content>
+                <span>Węg</span>
+            </div>
+            <div class="card-values-box">
+                <ng-content select="[s]"></ng-content>
+                <span>Sodu</span>
+            </div>
+            <div class="card-values-box">
+                <ng-content select="[bl]"></ng-content>
+                <span>Błonnika</span>
             </div>
         </div>
+        <div class="card-like" (click)="toggleLike()">
+            <i class="bi bi-suit-heart " *ngIf="!like"></i>
+            <i class="bi bi-suit-heart-fill  red" *ngIf="like"></i>
+        </div>
     </div>
-    <div class=""></div>
 </div>
 
 <!-- zastanowic sie nad wersją wide -->
+
+<ng-template #title>
+    <ng-content select="[title]"></ng-content>
+</ng-template>
