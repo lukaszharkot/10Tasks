@@ -1,3 +1,4 @@
+/* accordion and its children */
 .accordion{
     border: 1px solid #cccccc;
     border-radius: 5px;
@@ -52,7 +53,7 @@
 .accordion-icon.rotated{
     transform: rotate(180deg);
 }
-  
+
 .accordion-body {
     padding: 0px 30px;
     border-top: 1px solid #ddd;

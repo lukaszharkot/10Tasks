@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
 
+/* Credit card styles */
 .card-div{
     width: 402px;
     border-radius: 15px;
@@ -32,6 +33,7 @@
     color: #d6d6d6;
 }
 
+/* Universal styles */
 input{
     margin-top: 20px;
     margin-left: 20px;

@@ -1,5 +1,5 @@
 
-
+/* "normal" card styles */
 .card{
     background-color: transparent;
     max-width: 200px;
@@ -23,6 +23,7 @@
 .card:hover .card-photo{
     width: 60%;
 }
+
 .card-photo{
     display: flex;
     justify-content: center;
@@ -83,10 +84,6 @@
     color: red;
 }
 
-.red{
-    color: red;
-}
-
 .card-values-box{
     display: grid;
     font-family: "Noto Serif Oriya", serif;
@@ -99,7 +96,7 @@
     font-family: "Noto Serif Oriya", serif;
 }
 
-
+/* "wide" card styles */
 .card-wide{
     max-width: 420px;
     height: 200px;
@@ -111,6 +108,7 @@
     position: relative;
     transition: 400ms ease-in-out;
 }
+
 .card-wide .card-values-box{
     margin-top: 10px;
 }
@@ -135,7 +133,6 @@
     opacity: 1;
 }
 
-
 .card-photo-wide{
     display: flex;
     justify-content: center;
@@ -157,4 +154,9 @@
     align-items: center;
     justify-items: center;
     transition: 400ms ease-in-out;
+}
+
+/* Universal classes */
+.red{
+    color: red;
 }
