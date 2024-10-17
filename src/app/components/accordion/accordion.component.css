@@ -72,6 +72,6 @@
 .accordion-body.open {
     height: 70px;
     opacity: 1;
-    padding: 30px;
+    padding: 55px 30px;
 }
   
