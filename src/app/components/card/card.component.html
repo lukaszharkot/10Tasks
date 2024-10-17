@@ -1,6 +1,9 @@
 <div [ngClass]="{'card': style==='normal', 'card-wide': style==='wide'}">
     <div [ngClass]="{'card-photo': style==='normal', 'card-photo-wide': style==='wide'}">
         <ng-content select="[photo]"></ng-content>
+        <div class="card-stars">
+            <ng-content select="[stars]"></ng-content>
+        </div>
     </div>
     <div class="card-title" *ngIf="style==='normal'">
         <ng-template *ngTemplateOutlet="title"></ng-template>
@@ -41,6 +44,7 @@
                 <ng-content select="[bl]"></ng-content>
                 <span>Błonnika</span>
             </div>
+
         </div>
         <div class="card-like" (click)="toggleLike()">
             <i class="bi bi-suit-heart " *ngIf="!like"></i>

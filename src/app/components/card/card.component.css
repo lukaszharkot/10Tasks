@@ -128,13 +128,18 @@
 }
 .card-wide:hover .card-photo-wide{
     width: 41%;
+    margin-bottom: 45px;
 }
 .card-wide:hover .card-like{
     opacity: 1;
 }
+.card-wide:hover .card-stars{
+    opacity: 1;
+    height: 20px;
+}
 
 .card-photo-wide{
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 45%;
@@ -143,6 +148,7 @@
     background-color: transparent;
     transition: 400ms ease-in-out;
     margin-right: -10px;
+    position: relative;
 }
 
 .card-hover-wide{
@@ -156,7 +162,18 @@
     transition: 400ms ease-in-out;
 }
 
+.card-stars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15px;
+    opacity: 0;
+    transition: 400ms ease-in-out;
+    color: #282828;
+}
+
 /* Universal classes */
 .red{
     color: red;
 }
+
