@@ -1,7 +1,7 @@
 <div [ngClass]="{'card': style==='normal', 'card-wide': style==='wide'}">
-    <div [ngClass]="{'card-photo': style==='normal', 'card-photo-wide': style==='wide'}">
+    <div [ngClass]="{'card-photo': style==='normal', 'card-photo-wide': style==='wide', 'card-photo-wide-stars': starsVisible && style === 'wide'}">
         <ng-content select="[photo]"></ng-content>
-        <div class="card-stars">
+        <div class="card-stars" #starsContainer>
             <ng-content select="[stars]"></ng-content>
         </div>
     </div>
