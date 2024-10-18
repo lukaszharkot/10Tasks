@@ -15,6 +15,8 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })
 export class Task6Component implements OnInit {
+  dishes = ['Spaghetti Bolognese','Tacos','Chicken Curry','Caesar Salad','Grilled Salmon','Vegetable Stir Fry','Beef Stroganoff','Margherita Pizza','Pad Thai','Eggplant Parmesan'];
+  direction?: 'asc' | 'desc';
 
   constructor() { }
 

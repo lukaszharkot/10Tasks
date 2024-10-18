@@ -2,5 +2,23 @@
     <app-task-component [taskId]=6></app-task-component>
     <div class="task-div">
         <p class="task-div-text">Task Div</p>
+        <p class="task-text">Using radio input choose the direction of sorting the list (asc or desc). Then pipe "StringsSort" returns the sorted value.</p>
+        <div class="pipe-list">
+            <div class="input-field">
+                <label>
+                    <input type="radio" name="sortDirection"  [(ngModel)]="direction" [value]="'asc'">
+                    Ascending
+                </label>
+                <label>
+                    <input type="radio" name="sortDirection" [(ngModel)]="direction" [value]="'desc'">
+                    Descending
+                </label>
+            </div>
+            <div *ngFor="let dish of dishes | stringsSort: direction">
+                <div class="underline" style="width: 100%;"></div>
+                <div class="list-element" >{{ dish }}</div>
+            </div>
+            
+        </div>
     </div>
 </main>
