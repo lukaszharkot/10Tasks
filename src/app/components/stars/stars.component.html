@@ -1,0 +1,7 @@
+<main>
+    <div class="stars-container">
+        <i *ngFor="let star of starsArray" [ngClass]="{'bi bi-star-fill' : star===1, 'bi bi-star-half': star===2, 'bi bi-star' : star===0}"></i>
+    </div>
+</main>
+
+<!-- No ngIf but i used ngClass depending on my array instead -->
