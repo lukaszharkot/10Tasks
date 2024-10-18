@@ -2,5 +2,26 @@
     <app-task-component [taskId]=5></app-task-component>
     <div class="task-div">
         <p class="task-div-text">Task Div</p>
+        <p class="task-text">Using input we can choose the number of stars (max - 5).</p>
+        <div class="stars-container">
+            <app-stars [stars]="1" class="stars"></app-stars>
+            <app-stars [stars]="2.5" class="stars"></app-stars>
+            <app-stars [stars]="6" class="stars"></app-stars>
+        </div>
+        <p class="task-text">We can implement the stars rating to our "wide" card.</p>
+        <div class="card-container">
+            <app-card [style]="'wide'">
+                <img photo class="task-img" src="assets/spaghetti.png" alt="Spaghetti bolognese"/>
+                <span title class="title">Makaron spaghetti w sosie bolognese</span>
+                <span time class="time">20</span>
+                <span kcal class="values">618</span>
+                <span b class="values">41g</span>
+                <span t class="values">13g</span>
+                <span w class="values">86g</span>
+                <span s class="values">0.8g</span>
+                <span bl class="values">15g</span>
+                <div stars><app-stars [stars]="4.5" class="card-stars"></app-stars></div> <!-- Added stars as a ng-content to card 'wide' -->
+            </app-card>
+        </div>
     </div>
 </main>

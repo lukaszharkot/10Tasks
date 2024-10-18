@@ -15,7 +15,6 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })
 export class Task5Component implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

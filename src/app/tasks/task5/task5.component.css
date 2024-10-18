@@ -1,0 +1,38 @@
+.stars{
+    margin: 5px 0px;
+    font-size: 22px;
+    color: #282828;
+}
+
+.stars-container{
+    margin-left: 25px;
+    display: grid;
+
+}
+
+/* Card styles */
+.card-container{
+    margin-left: 20px;
+}
+
+.task-img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.title{
+    font-family: "Noto Serif Oriya", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.time{
+    font-family: "Noto Serif Oriya", serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.values{
+    font-size: 12px;
+}
