@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms'; 
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent } from './components/card/card.component';
@@ -19,8 +20,10 @@ import { Task8Component } from './tasks/task8/task8.component';
 import { Task9Component } from './tasks/task9/task9.component';
 import { Task10Component } from './tasks/task10/task10.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
-import { CreditCardFormatPipe } from './pipes/credit-card-format.pipe';
 import { StarsComponent } from './components/stars/stars.component';
+
+import { CreditCardFormatPipe } from './pipes/credit-card-format.pipe';
+import { StringsSortPipe } from './pipes/strings-sort.pipe';
 
 @NgModule({
   declarations: [
@@ -40,13 +43,15 @@ import { StarsComponent } from './components/stars/stars.component';
     Task10Component,
     AccordionComponent,
     CreditCardFormatPipe,
-    StarsComponent
+    StarsComponent,
+    StringsSortPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
