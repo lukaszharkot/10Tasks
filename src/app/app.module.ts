@@ -20,6 +20,7 @@ import { Task9Component } from './tasks/task9/task9.component';
 import { Task10Component } from './tasks/task10/task10.component';
 import { AccordionComponent } from './components/accordion/accordion.component';
 import { CreditCardFormatPipe } from './pipes/credit-card-format.pipe';
+import { StarsComponent } from './components/stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CreditCardFormatPipe } from './pipes/credit-card-format.pipe';
     Task9Component,
     Task10Component,
     AccordionComponent,
-    CreditCardFormatPipe
+    CreditCardFormatPipe,
+    StarsComponent
   ],
   imports: [
     BrowserModule,
