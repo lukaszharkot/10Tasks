@@ -11,6 +11,8 @@ import { Task8Component } from './tasks/task8/task8.component';
 import { Task9Component } from './tasks/task9/task9.component';
 import { Task10Component } from './tasks/task10/task10.component';
 import { TasklistComponent } from './tasks/tasklist/tasklist.component';
+import { FormGuard } from './interfaces/can-it-deactivate';
+import { FormGroup } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -46,6 +48,7 @@ const routes: Routes = [
   {
     path: 'task-7',
     title: '7th Task ツ',
+    canDeactivate: [FormGuard],
     component: Task7Component,
   },
   {
