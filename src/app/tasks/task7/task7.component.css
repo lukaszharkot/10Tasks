@@ -1,0 +1,97 @@
+
+/* left-side and its children */
+.left-side{
+    display: flex;
+    width: 50%;
+    justify-content: end;
+    overflow: hidden;
+    margin: 0px 10%;
+}
+
+.input-div{
+    margin-top: 15px;
+    width: 250px;
+    min-width: 120px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin-top: 7.5px;
+    width: 90%;
+    padding: 0px 10px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: "Kode Mono", monospace;
+}input::placeholder{
+    margin-left: 20px;
+}
+
+.button-div{
+    width: 90%;
+    padding: 0px 10px;
+    height: 50px;
+    position: relative;
+}
+
+button{
+    margin-top: 7.5px;
+    height: 40px;
+    width: 60px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    transition: 400ms ease-in-out;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+button.valid{
+    background-color: rgb(61, 61, 138);
+    border: 1px solid #cccccc;
+    color: #cccccc;
+}
+
+/* Middle section */
+.middleline{
+    width: 1px;
+    height: 300px;
+    background-color: #cccccc;
+}
+
+/* right-side and its children */
+.right-side{
+    display: flex;
+    width: 50%;
+    margin: 0px 10%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.task-form{
+    width: 250px;
+    min-width: 120px;
+    height: 220px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    position: relative;
+}
+
+.task-form-text{
+    position: absolute;
+    margin-left: 12%;
+}
+
+.task-form-label{
+    position: absolute;
+    margin-left: 10%;
+    color: #a7a7a7; 
+    font-family: 'Kode Mono', monospace;
+    font-size: 14px;
+}

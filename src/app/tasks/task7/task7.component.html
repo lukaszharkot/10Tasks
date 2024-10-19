@@ -1,6 +1,31 @@
 <main @fadeIn>
     <app-task-component [taskId]=7></app-task-component>
-    <div class="task-div">
+    <div class="task-div" style="display: flex; height: 100%;">
         <p class="task-div-text">Task Div</p>
+        <div class="left-side">
+            <form [formGroup]="TaskForm" class="input-div">
+                <input formControlName="name" type="text" placeholder="Name">
+                <input formControlName="surname" type="text" placeholder="Surname">
+                <input formControlName="email" type="email" placeholder="E-mail">
+                <input id="tel" formControlName="tel" type="text" placeholder="Phone Number">
+                <div class="button-div">
+                    <button (click)="saveForm()" [disabled]="TaskForm.pristine || TaskForm.invalid" [ngClass]="{'valid' : TaskForm.valid}"><i class="bi bi-floppy2-fill"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="middleline"></div>
+        <div class="right-side">
+            <div class="task-form">
+                <div class="task-text" style="margin-top: -18px; margin-left: 0px; color: #a7a7a7; background-color: white; width: 120px; text-align: center;">TaskForm values</div>
+                <p class="task-form-label" style="top: 10%">Name: </p>
+                <p class="task-form-text" style="top: 18%">{{ FormValue.name }}</p>
+                <p class="task-form-label" style="top: 30%;">Surname: </p>
+                <p class="task-form-text" style="top: 38%">{{ FormValue.surname }}</p>
+                <p class="task-form-label" style="top: 50%;">E-mail: </p>
+                <p class="task-form-text" style="top: 58%">{{ FormValue.email }}</p>
+                <p class="task-form-label" style="top: 70%;">Phone Number: </p>
+                <p class="task-form-text" style="top: 78%">{{ FormValue.tel }}</p>
+            </div>
+        </div>
     </div>
 </main>
