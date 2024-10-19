@@ -10,7 +10,7 @@ export interface CanItDeactivate {
   providedIn: 'root',
 })
 
-export class CanDeactivateGuard implements CanDeactivate<CanItDeactivate> {
+export class FormGuard implements CanDeactivate<CanItDeactivate> {
   canDeactivate(
     component: CanItDeactivate
   ): Observable<boolean> | Promise<boolean> | boolean {
