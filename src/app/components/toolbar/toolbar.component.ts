@@ -1,6 +1,6 @@
 import { Component, inject, Input, ViewChild, ElementRef, Renderer2, AfterViewInit, OnInit, OnDestroy} from '@angular/core';
 import { trigger, style, transition, animate } from '@angular/animations';
-import { TaskService } from 'src/app/services/task.service';
+import { TaskService } from '../../services/task.service';
 import { fromEvent, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -40,7 +40,13 @@ export class ToolbarComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    this.renderer.setStyle(this.toolbar.nativeElement, 'background-color', `var(--${this.theme})`);
+      if (this.theme === 'light') {
+    this.renderer.setStyle(this.toolbar.nativeElement, 'background-color', `var(--light)`);
+    this.renderer.setStyle(this.toolbar.nativeElement, 'color', `black`);
+  } else if (this.theme === 'dark') {
+    this.renderer.setStyle(this.toolbar.nativeElement, 'background-color', `var(--dark)`);
+    this.renderer.setStyle(this.toolbar.nativeElement, 'color', `white`);
+  }
 
     // Rxjs tworzymy obserwowaną fukcje pipe
     const scroll$ = fromEvent(window, 'scroll').pipe(
